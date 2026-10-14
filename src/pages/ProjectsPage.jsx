@@ -3,12 +3,19 @@ import Footer from "../components/layout/Footer";
 import ProjectGalleryCard from "../components/projects/ProjectGalleryCard";
 import projectGallery from "../data/projectGallery";
 import { useNavigate } from "react-router-dom";
+import SEO from "../components/SEO";
 
 function ProjectsPage() {
   const navigate = useNavigate();
 
   return (
     <>
+      <SEO
+        title="Remodeling Projects | Lincoln Construction & Remodeling"
+        description="View bathroom remodeling, interior renovation, flooring, painting, and residential construction projects by Lincoln Construction & Remodeling."
+        path="/projects"
+      />
+      
       <Header />
 
       <main className="projects-page">

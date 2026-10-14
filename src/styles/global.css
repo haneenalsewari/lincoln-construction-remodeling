@@ -1581,6 +1581,241 @@ img {
 }
 
 /* =========================================
+   FAQ
+   ========================================= */
+
+.faq {
+  padding: 145px 0;
+}
+
+.faq__heading {
+  max-width: 900px;
+  margin-bottom: 70px;
+}
+
+.faq__heading h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(3rem, 5.5vw, 6rem);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+
+.faq__list {
+  border-top: 1px solid var(--border-light);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.faq__question {
+  width: 100%;
+  padding: 28px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  color: var(--black);
+  background: transparent;
+  border: none;
+
+  text-align: left;
+}
+
+.faq__question span {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 500;
+}
+
+.faq__answer {
+  max-width: 780px;
+  padding: 0 0 30px;
+}
+
+.faq__answer p {
+  color: var(--gray-dark);
+  line-height: 1.8;
+}
+
+/* =========================================
+   LEGAL PAGES
+   ========================================= */
+
+.legal-page {
+  min-height: 100vh;
+  padding: 170px 0 120px;
+
+  color: var(--black);
+  background: var(--ivory);
+}
+
+.legal-page__container {
+  max-width: 950px;
+}
+
+.legal-page h1 {
+  margin-bottom: 20px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+
+.legal-page__updated {
+  margin-bottom: 80px;
+  color: var(--gray-dark);
+}
+
+.legal-page section {
+  padding: 38px 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.legal-page section:last-child {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.legal-page h2 {
+  margin-bottom: 18px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.legal-page section p {
+  max-width: 820px;
+  margin-bottom: 14px;
+
+  color: var(--gray-dark);
+  line-height: 1.85;
+}
+
+/* =========================================
+   CUSTOM 404
+   ========================================= */
+
+.not-found {
+  min-height: 85vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 160px 0 100px;
+
+  color: var(--white);
+  background: var(--black);
+}
+
+.not-found__content {
+  max-width: 1100px;
+}
+
+.not-found h1 {
+  max-width: 900px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.92;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+.not-found__content > p:last-of-type {
+  max-width: 520px;
+  margin-top: 30px;
+
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.not-found__actions {
+  display: flex;
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.button--outline {
+  padding: 17px 25px;
+
+  color: var(--white);
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  font-size: 0.71rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   FOOTER LEGAL
+   ========================================= */
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer__legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__legal a {
+  color: #777;
+  transition: color 0.25s ease;
+}
+
+.footer__legal a:hover {
+  color: var(--white);
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .faq {
+    padding: 95px 0;
+  }
+
+  .legal-page {
+    padding: 130px 0 90px;
+  }
+
+  .footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq__question {
+    padding: 22px 0;
+  }
+
+  .not-found__actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer__legal {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* =========================================
    PROJECTS PAGE — TABLET / MOBILE
    ========================================= */
 

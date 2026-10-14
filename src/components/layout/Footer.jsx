@@ -1,4 +1,8 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 
 function Footer() {
   const location = useLocation();
@@ -6,7 +10,8 @@ function Footer() {
 
   const goToHomeSection = (sectionId) => {
     const scrollToSection = () => {
-      const section = document.getElementById(sectionId);
+      const section =
+        document.getElementById(sectionId);
 
       if (section) {
         section.scrollIntoView({
@@ -20,19 +25,21 @@ function Footer() {
       return false;
     };
 
-    // Already on homepage
     if (location.pathname === "/") {
       scrollToSection();
       return;
     }
 
-    // Coming from Projects or another page
     navigate(`/#${sectionId}`);
   };
 
   const handleHomeClick = () => {
     if (location.pathname === "/") {
-      window.history.replaceState(null, "", "/");
+      window.history.replaceState(
+        null,
+        "",
+        "/"
+      );
 
       window.scrollTo({
         top: 0,
@@ -46,7 +53,9 @@ function Footer() {
   };
 
   const handleProjectsClick = () => {
-    if (location.pathname === "/projects") {
+    if (
+      location.pathname === "/projects"
+    ) {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -59,7 +68,10 @@ function Footer() {
   };
 
   return (
-    <footer className="footer" id="contact">
+    <footer
+      className="footer"
+      id="contact"
+    >
       <div className="container footer__top">
         <button
           className="footer__brand footer-brand-button"
@@ -73,13 +85,19 @@ function Footer() {
 
           <div>
             <strong>LINCOLN</strong>
-            <span>Construction & Remodeling</span>
+
+            <span>
+              Construction & Remodeling
+            </span>
           </div>
         </button>
 
         <div className="footer__contact">
           <span>Richmond, Texas</span>
-          <span>Serving Greater Houston</span>
+
+          <span>
+            Serving Greater Houston
+          </span>
 
           <a href="tel:+17135779067">
             713-577-9067
@@ -91,19 +109,25 @@ function Footer() {
         </div>
 
         <nav className="footer__links">
-          <button onClick={handleHomeClick}>
+          <button
+            onClick={handleHomeClick}
+          >
             Home
           </button>
 
           <button
             onClick={() =>
-              goToHomeSection("capabilities")
+              goToHomeSection(
+                "capabilities"
+              )
             }
           >
             Services
           </button>
 
-          <button onClick={handleProjectsClick}>
+          <button
+            onClick={handleProjectsClick}
+          >
             Projects
           </button>
 
@@ -119,9 +143,20 @@ function Footer() {
 
       <div className="container footer__bottom">
         <span>
-          © {new Date().getFullYear()} Lincoln Construction &
+          © {new Date().getFullYear()}{" "}
+          Lincoln Construction &
           Remodeling
         </span>
+
+        <div className="footer__legal">
+          <Link to="/privacy">
+            Privacy Policy
+          </Link>
+
+          <Link to="/terms">
+            Terms of Use
+          </Link>
+        </div>
       </div>
     </footer>
   );

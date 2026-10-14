@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lincoln-construction-remodeling.vercel.app/sitemap.xml

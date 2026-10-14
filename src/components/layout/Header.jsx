@@ -9,6 +9,10 @@ function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const forceLightHeader =
+    location.pathname === "/privacy" ||
+    location.pathname === "/terms";
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
@@ -84,7 +88,9 @@ function Header() {
   return (
     <header
       className={`header ${
-        scrolled ? "header--scrolled" : ""
+        scrolled || forceLightHeader
+          ? "header--scrolled"
+          : ""
       }`}
     >
       <div className="header__inner container">
